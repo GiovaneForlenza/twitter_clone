@@ -1,0 +1,144 @@
+@import "../global.scss";
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $background-color-gray;
+    .sign-in-container {
+      background-color: $color-black;
+      width: 700px;
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 20px;
+      .sign-in {
+        width: 350px;
+        padding: 10px;
+        height: 650px;
+        .twitter-icon {
+          font-size: 40px;
+        }
+        .icon,
+        .title {
+          margin-bottom: 20px;
+        }
+        .title {
+          width: 100%;
+          font-size: 30px;
+          font-weight: bold;
+        }
+        .google,
+        .apple,
+        .btn-primary,
+        .btn-secondary {
+          width: 100%;
+          height: 20px;
+          margin: 20px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+          color: $color-black;
+          background-color: $color-white;
+          font-size: 18px;
+          padding: 10px 0;
+          user-select: none;
+          transition: all 0.5s;
+          cursor: pointer;
+          .icon {
+            font-size: 20px;
+            margin: 0 10px;
+          }
+        }
+        .division {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            margin: 5px;
+          }
+          .line {
+            width: 100%;
+            border-top: 1px solid $line-color-gray;
+          }
+        }
+        form {
+          .input {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            border: 1px solid $line-color-gray;
+            background: transparent;
+            text-align: left;
+            height: 50px;
+            color: white;
+            margin: 10px 0;
+            padding: 0 5px;
+            box-sizing: border-box;
+            .placeholder {
+              font-size: 18px;
+              transition: all 0.3s;
+              color: $color-secondary-gray;
+              user-select: none;
+            }
+            input {
+              display: none;
+              width: 90%;
+              background-color: transparent;
+              border: none;
+              margin: 2px 0;
+              height: 20px;
+              &:focus {
+                border: none;
+              }
+            }
+            &:active {
+              border: 1px solid $color-accent-blue;
+            }
+            &:active input {
+              display: inline-block;
+              // border: 1px solid $color-accent-blue;
+            }
+            &:active .placeholder {
+              color: $color-accent-blue;
+              font-size: 15px;
+            }
+          }
+
+          .btn-primary {
+            border: none;
+            &:hover {
+              background: $color-background-hover-light-gray;
+            }
+          }
+
+          .btn-secondary {
+            border: 2px solid $line-color-gray;
+            background: $color-black;
+            color: $color-white;
+            &:hover {
+              background: $color-secondary-gray;
+            }
+          }
+        }
+        .sign-up-container {
+          text-align: left;
+          color: $color-secondary-gray;
+          .accent-blue {
+            color: $color-accent-blue;
+            cursor: pointer;
+            user-select: none;
+          }
+        }
+      }
+    }
+  }
+}
