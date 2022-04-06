@@ -1,40 +1,40 @@
 @import "../global.scss";
 
-@media only screen and (min-width: 600px) and (max-width: 1000px) {
-  .background {
-    .sign-in-container {
-      .sign-in {
-        .division {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          span {
-            margin: 5px;
-          }
-          .line {
-            width: 100%;
-            border-top: 1px solid $line-color-gray;
-          }
+// @media only screen and (min-width: 600px) and (max-width: 1000px) {
+.background {
+  .sign-in-container {
+    .sign-in {
+      .division {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          margin: 5px;
         }
+        .line {
+          width: 100%;
+          border-top: 2px solid $line-color-gray;
+        }
+      }
 
-        .btn-secondary {
-          border: 2px solid $line-color-gray;
-          background: $color-black;
-          color: $color-white;
-          &:hover {
-            background: $color-secondary-gray;
-          }
+      .btn-secondary {
+        border: 2px solid $line-color-gray;
+        background: $color-black;
+        color: $color-white;
+        &:hover {
+          background: $color-secondary-gray;
         }
-        .sign-up-button-container {
-          text-align: left;
-          color: $color-secondary-gray;
-          .accent-blue {
-            color: $color-accent-blue;
-            cursor: pointer;
-            user-select: none;
-          }
+      }
+      .sign-up-button-container {
+        text-align: left;
+        color: $color-secondary-gray;
+        .accent-blue {
+          color: $color-accent-blue;
+          cursor: pointer;
+          user-select: none;
         }
       }
     }
   }
 }
+// }
