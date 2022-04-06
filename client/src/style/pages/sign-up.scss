@@ -1,0 +1,87 @@
+@import "../global.scss";
+
+.background {
+  .sign-up-container {
+    .sign-up {
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .go-back {
+          width: 20px;
+          font-size: 30px;
+          user-select: none;
+          cursor: pointer;
+        }
+        .twitter-icon {
+          width: 500px;
+        }
+      }
+      .span {
+        margin: 10px 0;
+        color: $color-accent-blue;
+        text-align: right;
+        user-select: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .birth-date-container {
+        text-align: left;
+        .description {
+          font-size: 15px;
+          color: $color-secondary-gray;
+          margin: 15px 0;
+        }
+        .input-birth-date-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .select-input {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid $color-secondary-gray;
+            span {
+              margin-bottom: 10px;
+              color: $color-secondary-gray;
+            }
+          }
+          .select-input.month {
+            width: 200px;
+          }
+          .select-input.day {
+            width: 90px;
+          }
+          .select-input.year {
+            width: 130px;
+          }
+          .select-input.month,
+          .select-input.day,
+          .select-input.year {
+            select {
+              width: 100%;
+              height: 30px;
+              background: transparent;
+              border: none;
+              cursor: pointer;
+              &:active {
+                border: none;
+              }
+              &:active .select-input-container {
+              }
+              option {
+                background: #000;
+                border: 1px solid $color-accent-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

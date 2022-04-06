@@ -2,7 +2,14 @@ import React from "react";
 import { BsTwitter, BsApple } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import "../style/pages/sign-in.scss";
-function Login() {
+import "../style/pages/sign-in-up.scss";
+function Login({ setShowSignUp }) {
+  function activateInput() {
+    document
+      .getElementById("input-container-phone-login")
+      .classList.add("active");
+  }
+
   return (
     <div className="background">
       <div className="sign-in-container">
@@ -29,8 +36,14 @@ function Login() {
             <div className="line"></div>
           </div>
           <form action="">
-            <div className="input">
-              <div className="placeholder">Phone, email or username</div>
+            <div
+              className="input"
+              onClick={activateInput}
+              id="input-container-phone-login"
+            >
+              <div className="placeholder" onClick={activateInput}>
+                Phone, email or username
+              </div>
               <input type="text" placeholder="" />
             </div>
             <div type="submit" className="btn-primary">
@@ -38,9 +51,11 @@ function Login() {
             </div>
             <div className="btn-secondary">Forgot password?</div>
           </form>
-          <div className="sign-up-container">
+          <div className="sign-up-button-container">
             <span>Don't have an account? </span>
-            <span className="accent-blue">Sign up</span>
+            <span className="accent-blue" onClick={() => setShowSignUp(true)}>
+              Sign up
+            </span>
           </div>
         </div>
       </div>
